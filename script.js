@@ -4,3 +4,17 @@ const result = document.getElementById('result');
 const more = document.getElementById('more');
 
 const apiURL = 'https://api.lyrics.ovh';
+
+//
+
+// Event listeners
+form.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const searchTerm = search.value.trim();
+  if (!searchTerm) {
+    alert('Please type in a search term');
+  } else {
+    searchSongs(searchTerm);
+  }
+});
