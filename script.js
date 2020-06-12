@@ -17,6 +17,9 @@ async function searchSongs(term) {
   showData(data);
 }
 
+// Show song and artist in DOM
+function showData(data) {}
+
 // Event listeners
 form.addEventListener('click', (e) => {
   e.preventDefault();
