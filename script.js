@@ -51,6 +51,15 @@ function showData(data) {
         .join('')}
     </ul>
   `;
+
+  if (data.prev || data.next) {
+    more.innerHTML = `
+    ${data.prev ? `<button class="btn">Prev</button>` : ''}
+    ${data.next ? `<button class="btn">Next</button>` : ''}
+    `;
+  } else {
+    more.innerHTML = '';
+  }
 }
 
 // Event listeners
