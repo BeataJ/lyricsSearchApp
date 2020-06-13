@@ -54,8 +54,16 @@ function showData(data) {
 
   if (data.prev || data.next) {
     more.innerHTML = `
-    ${data.prev ? `<button class="btn">Prev</button>` : ''}
-    ${data.next ? `<button class="btn">Next</button>` : ''}
+    ${
+      data.prev
+        ? `<button class="btn" onclick="getMoreSongs('${data.prev}')">Prev</button>`
+        : ''
+    }
+    ${
+      data.next
+        ? `<button class="btn" onclick="getMoreSongs('${data.next}')">Next</button>`
+        : ''
+    }
     `;
   } else {
     more.innerHTML = '';
