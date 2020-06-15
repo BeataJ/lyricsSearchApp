@@ -15,7 +15,6 @@ async function searchSongs(term) {
   const data = await res.json();
 
   showData(data);
-  console.log(data);
 }
 
 // Show song and artist in DOM
@@ -79,6 +78,7 @@ async function getMoreSongs(url) {
 }
 
 // Event listeners
+
 form.addEventListener('click', (e) => {
   e.preventDefault();
 
@@ -88,4 +88,9 @@ form.addEventListener('click', (e) => {
   } else {
     searchSongs(searchTerm);
   }
+});
+
+// Get lyrics button click
+result.addEventListener('click', (e) => {
+  console.log(e.target);
 });
