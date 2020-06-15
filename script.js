@@ -92,5 +92,12 @@ form.addEventListener('click', (e) => {
 
 // Get lyrics button click
 result.addEventListener('click', (e) => {
-  console.log(e.target);
+  const clickedEl = e.target;
+
+  if (clickedEl.tagName === 'BUTTON') {
+    const artist = clickedEl.getAttribute('data-artist');
+    const songTitle = clickedEl.getAttribute('data-songtitle');
+
+    getLyrics(artist, songTitle);
+  }
 });
